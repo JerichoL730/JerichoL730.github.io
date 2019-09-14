@@ -19,7 +19,7 @@
 <meta property="og:description" content="理解面向对象  Python是一门面向对象的编程语言，对面向对象的语言编码的过程叫做面向对象编程。  面向对象编程是一种程序设计思想，把对象作为程序的基本单元，一个包含数据和操作数据的函数。  面向对象设计是把计算机程序视为一组对象的集合，每个对象都可以接受其他对象发来的消息，并处理这些消息，计算机程序的执行就是对象之间的消息传递。  在Python中，所以数据类型都被视为对象，也可以自定义对象。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-09-14T04:46:08.930Z">
+<meta property="og:updated_time" content="2019-09-14T08:00:30.467Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python语言面向对象编程">
 <meta name="twitter:description" content="理解面向对象  Python是一门面向对象的编程语言，对面向对象的语言编码的过程叫做面向对象编程。  面向对象编程是一种程序设计思想，把对象作为程序的基本单元，一个包含数据和操作数据的函数。  面向对象设计是把计算机程序视为一组对象的集合，每个对象都可以接受其他对象发来的消息，并处理这些消息，计算机程序的执行就是对象之间的消息传递。  在Python中，所以数据类型都被视为对象，也可以自定义对象。">
@@ -161,7 +161,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a minute read (About 218 words)
+                    6 minutes read (About 846 words)
                 </span>
                 
                 
@@ -180,7 +180,9 @@
         </h1>
         <div class="content">
             <h2 id="理解面向对象"><a href="#理解面向对象" class="headerlink" title="理解面向对象"></a>理解面向对象</h2><p>  Python是一门面向对象的编程语言，对面向对象的语言编码的过程叫做面向对象编程。<br>  面向对象编程是一种程序设计思想，把对象作为程序的基本单元，一个包含数据和操作数据的函数。<br>  面向对象设计是把计算机程序视为一组对象的集合，每个对象都可以接受其他对象发来的消息，并处理这些消息，计算机程序的执行就是对象之间的消息传递。<br>  在Python中，所以数据类型都被视为对象，也可以自定义对象。自定义对象数据类型就是面向对象中的类（Class）的概念。</p>
-<h2 id="面向对象概念"><a href="#面向对象概念" class="headerlink" title="面向对象概念"></a>面向对象概念</h2><p>  （1）对象：</p>
+<h2 id="面向对象概念"><a href="#面向对象概念" class="headerlink" title="面向对象概念"></a>面向对象概念</h2><p>  （1）类：用来描述具有相同属性和方法的对象的集合。类定义了集合中每个对象共有的属性和方法，对象是类的实例。例如，矿泉水和农夫山泉，农夫山泉就是矿泉水类的实例。<br>   (2) 多态：对不同类的对象使用同样的操作。<br>   (3) 封装：对外部世界隐藏对象的工作细节。<br>   (4) 继承：即一个派生类(derived class)继承基类(base class)的字段和方法。继承允许把一个派生类的对象作为一个基类对象对待，已普通类为基础建立专门的类对象。<br>   (5) 对象：通过类定义的数据结构实例。对象包括两个数据成员(类变量和实例变量)和方法。</p>
+<h2 id="类的定义与使用"><a href="#类的定义与使用" class="headerlink" title="类的定义与使用"></a>类的定义与使用</h2><p>  类的一个示例(my_class.py)：<br>class Myclass(object):<br>    i =123<br>    def f(self):<br>        return ‘hello world’<br>  由此可见，类的语法格式如下：<br>class ClassName(object):<br>    .<br>    .<br>    .<br>  Python中定义类使用class关键字，class后面紧接着类名，类名通常是大写开头的单词；紧接着是(object)，表示该类是从哪个类继承下来的。通常如果没有继承类，就使用object类，这是所有的类最终会继承的类。类包含属性和方法。</p>
+<p>  类的使用，如下的代码为例：<br>class Myclass(object):<br>    i =123<br>    def f(self):<br>        return ‘hello world’<br>use_class =Myclass()<br>print(f’调用类的属性:{use_class.i}’)<br>print(f’调用类的方法:{use_class.f()}’)<br>  执行结果如下：<br>  调用类的属性:123<br>  调用类的方法:hello world<br>  由输入代码中的调节方式可知，类的使用比函数调用多了几个操作，调用类时需要执行如下操作：<br>use_class =Myclass()<br>  这一步叫做类的实例化，即创建一个类的实例。此处得到的use_class变量称为类的具体对象。再看后面两行的调用：<br>print(f’调用类的属性:{use_class.i}’)<br>print(f’调用类的方法:{use_class.f()}’)<br>  这里第一行的use_class.i用于调用类的属性，也就是我们前面所说的类变量。第二行后的use_class.f()用于调用类的方法。<br>  在类中定义方法时，第一个参数必须是self。除第一个参数外，类的方法和普通函数并没有什么区别。</p>
 
         </div>
         

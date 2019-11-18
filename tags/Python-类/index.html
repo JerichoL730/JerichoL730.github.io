@@ -161,53 +161,6 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-14T08:50:43.000Z">2019-09-14</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 minutes read (About 467 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/09/14/深入类/">深入类</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="类的构造方法"><a href="#类的构造方法" class="headerlink" title="类的构造方法"></a>类的构造方法</h2><p>在介绍之前首先对之前的示例进行一些改动，代码如下：</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Myclass(object):</span><br><span class="line">    i =123</span><br><span class="line">    def __init__(self,name):</span><br><span class="line">        self.name = name</span><br><span class="line">    def f(self):</span><br><span class="line">        <span class="hljs-built_in">return</span> <span class="hljs-string">'hello,'</span> + self.name</span><br><span class="line">use_class = Myclass(<span class="hljs-string">'xiaomeng'</span>)</span><br><span class="line"><span class="hljs-built_in">print</span>(f<span class="hljs-string">'调用类的属性：&#123;use_class.i&#125;'</span>)</span><br><span class="line"><span class="hljs-built_in">print</span>(f<span class="hljs-string">'调用类的方法：&#123;use_class.f()&#125;'</span>)</span><br></pre></td></tr></table></figure>
-
-<p>程序的执行结果为：<br>调用类的属性：123<br>调用类的方法：hello,xiaomeng<br>若类的实例化写法和之前一样，即：<br>use_class = Myclass()<br>则程序的执行结果为：<br>Traceback (most recent call last):<br>  File “/Users/JerichoChen/PycharmProjects/HelloWorld/helloworld.py”, line 9, in <module><br>    use_class = Myclass()<br>TypeError: <em>init</em>() missing 1 required positional argument: ‘name’<br>错误的原因是因为在Python中，<em>init</em>()方法是一个特殊方法，在对象实例化时会被调用。<br>一个类中可定义多个构造方法，但实例化类时至实例化最后的构造方法，即后面的构造方法会覆盖前面的构造方法，并且需要根据最后一个构造方法的形式进行实例化。<br>在类内部有属性和方法，外部代码可以通过直接调用实例变量的方法操作数据，这样就隐藏了内部的复杂逻辑，例如：</module></p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class student(object):</span><br><span class="line">    def __init__(self,name,score):</span><br><span class="line">        self.name=name</span><br><span class="line">        self.score=score</span><br><span class="line">    def info(self):</span><br><span class="line">        <span class="hljs-built_in">print</span>(f<span class="hljs-string">'学生: &#123;self.name&#125;; 分数: &#123;self.score&#125;'</span>)</span><br><span class="line">stu = student(<span class="hljs-string">'xiaomeng'</span>,95)</span><br><span class="line"><span class="hljs-built_in">print</span>(f<span class="hljs-string">'修改前分数: &#123;stu.score&#125;'</span>)</span><br><span class="line">stu.info()</span><br><span class="line">stu.score=0</span><br><span class="line"><span class="hljs-built_in">print</span>(f<span class="hljs-string">'修改后分数:&#123;stu.score&#125;'</span>)</span><br><span class="line">stu.info()</span><br></pre></td></tr></table></figure>
-
-<p>程序执行结果如下：<br>修改前分数: 95<br>学生: xiaomeng; 分数: 95<br>修改后分数:0<br>学生: xiaomeng; 分数: 0<br>由代码和输出结果看到，在类中定义的非构造方法可以调用类中构造方法实例变量的属性，调用的方式为self.实例变量属性名，如代码中的self.name和self.score。</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-09-14T08:34:19.000Z">2019-09-14</time>
                 
                 
@@ -317,7 +270,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        2
+                        3
                     </p>
                 </div>
             </div>
@@ -432,7 +385,7 @@
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/Python-类/" style="font-size: 20px;">Python-类</a> <a href="/tags/Python-面向对象/" style="font-size: 10px;">Python-面向对象</a>
+        <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Python-类/" style="font-size: 10px;">Python-类</a> <a href="/tags/Python-面向对象/" style="font-size: 10px;">Python-面向对象</a>
     </div>
 </div>
 
@@ -451,14 +404,14 @@
             
             <a href="/2019/09/14/深入类/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="深入类">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Java学习笔记(一)">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-14T08:50:43.000Z">2019-09-14</time></div>
-                    <a href="/2019/09/14/深入类/" class="title has-link-black-ter is-size-6 has-text-weight-normal">深入类</a>
+                    <a href="/2019/09/14/深入类/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Java学习笔记(一)</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -541,9 +494,16 @@
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/Java/">
+                        <span class="tag">Java</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/Python-类/">
                         <span class="tag">Python-类</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -581,14 +541,14 @@
             
             <a href="/2019/09/14/深入类/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="深入类">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Java学习笔记(一)">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-14T08:50:43.000Z">2019-09-14</time></div>
-                    <a href="/2019/09/14/深入类/" class="title has-link-black-ter is-size-6 has-text-weight-normal">深入类</a>
+                    <a href="/2019/09/14/深入类/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Java学习笔记(一)</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -671,9 +631,16 @@
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/Java/">
+                        <span class="tag">Java</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/Python-类/">
                         <span class="tag">Python-类</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
